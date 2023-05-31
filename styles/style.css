@@ -1,22 +1,22 @@
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-  }
+body {
+	font-family: 'DM Sans', sans-serif;
+}
 
-    .logo1 {
-        font-size: 1.5rem;
-        font-weight: bolder;
-        text-transform: none;
-    }
+.logo1 {
+	font-size: 1.5rem;
+	font-weight: bolder;
+	text-transform: none;
+}
 
-    .first-screen-carusel {
-        max-width: 255px;
-        max-height: 380px;
-    }
+.img-first-screen {
+	max-width: 300px;
+	max-height: 450px;
+}
 
-     @media (max-width: 991.98px) { 
-        .first-screen-carusel {
-            display: none;
-        }
-     }
+.img-our-production {
+	max-width: 600px;
+	max-height: 800px;
+}
+
