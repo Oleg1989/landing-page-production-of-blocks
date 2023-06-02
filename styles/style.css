@@ -20,3 +20,11 @@ body {
 	max-height: 800px;
 }
 
+.icon {
+	width: 30px;
+}
+
+.icon-footer {
+	width: 50px;
+}
+
