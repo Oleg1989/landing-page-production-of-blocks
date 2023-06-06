@@ -26,16 +26,16 @@ try {
   $mail->SMTPAuth   = true;
 
   // Настройки почты отправителя
-  $mail->Host       = 'smtp.yandex.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'alexfrontenddudukalo@yandex.ru'; // Логин на почте
-  $mail->Password   = 'iiwfrjyrnbfrbfrx'; // Пароль на почте
+  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
+  $mail->Username   = 'infoorderhdblock@gmail.com'; // Логин на почте
+  $mail->Password   = '97a5e4p75'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('alexfrontenddudukalo@yandex.ru', 'Заявка с сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('infoorderhdblock@gmail.com', 'Заявка з сайта HDblock'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('alexfrontenddudukalo@yandex.ru');
+  $mail->addAddress('ivanishin9891@gmail.com');
 
   // Отправка сообщения
   $mail->isHTML(true);
