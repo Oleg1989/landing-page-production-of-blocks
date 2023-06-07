@@ -14,8 +14,8 @@ $phoneNumber = $data['phoneNumber'];
 
 // Контент письма
 $title = 'Заявка з сайта HDblock'; // Название письма
-$body = '<p>Ім`я: <strong>'.$userName.'</strong></p>'.
-        '<p>Мобільний телефон: <strong>'.$phoneNumber.'</strong></p>';
+$body = '<p>Ім`я: <strong>' . $userName . '</strong></p>' .
+  '<p>Мобільний телефон: <strong>' . $phoneNumber . '</strong></p>';
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -27,12 +27,12 @@ try {
 
   // Настройки почты отправителя
   $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'infoorderhdblock@gmail.com'; // Логин на почте
-  $mail->Password   = '97a5e4p75'; // Пароль на почте
+  $mail->Username   = 'orderinfohdblock@gmail.com'; // Логин на почте
+  $mail->Password   = 'kivpjkuaizbosydl'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('infoorderhdblock@gmail.com', 'Заявка з сайта HDblock'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('orderinfohdblock@gmail.com', 'Заявка з сайта HDblock'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
   $mail->addAddress('ivanishin9891@gmail.com');
@@ -46,8 +46,7 @@ try {
 
   // Сообщение об успешной отправке
   echo ('Заявка відправленна успішно!');
-
 } catch (Exception $e) {
   header('HTTP/1.1 400 Bad Request');
-  echo('Заявка не була відправленна! Причина помилки: {$mail->ErrorInfo}');
+  echo ('Заявка не була відправленна! Причина помилки: {$mail->ErrorInfo}');
 }
