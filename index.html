@@ -254,14 +254,14 @@
       </div>
       <div class="row">
         <h3 class="my-2 text-center">Замовити дзвінок</h3>
-        <form class="row g-3 my-2">
+        <form id="form" class="row g-3 my-2" autocomplete="off">
           <div class="col-md-12 col-lg-4">
             <label for="userName" class="visually-hidden">Ваше ім'я</label>
-            <input type="text" class="form-control" id="userName" placeholder="Ваше ім'я">
+            <input type="text" class="form-control" id="userName" name="userName" placeholder="Ваше ім'я" autocomplete="off">
           </div>
           <div class="col-md-12 col-lg-4">
-            <label for="inputPhoneNumber" class="visually-hidden">Ваш номер телефону</label>
-            <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Ваш номер телефону">
+            <label for="phoneNumber" class="visually-hidden">Ваш номер телефону</label>
+            <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Ваш номер телефону" autocomplete="off">
           </div>
           <div class="col-md-12 col-lg-4">
             <button type="button" class="btn btn-primary mb-3">Замовити</button>
