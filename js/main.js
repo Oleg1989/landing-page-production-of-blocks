@@ -4,7 +4,14 @@ im.mask(selector)
 
 let validation = new JustValidate("form")
 
-validation.addField("#userName", [
+validation
+.addField("#serviceSelection", [
+  {
+    rule: 'required',
+    errorMessage: "Виберіть послугу!",
+  }
+])
+.addField("#userName", [
   {
     rule: "required",
     errorMessage: "Введіть ім'я!"
@@ -14,22 +21,24 @@ validation.addField("#userName", [
     value: 2,
     errorMessage: "Мінімум 2 символа!"
   }
-]).addField("#phoneNumber", [
+])
+.addField("#phoneNumber", [
   {
     validator: (value) => {
       const phone = selector.inputmask.unmaskedvalue()
       return Boolean(Number(phone) && phone.length > 0)
     },
-    errorMessage: 'Введіть номер телефона'
+    errorMessage: 'Введіть номер телефона!'
   },
   {
     validator: (value) => {
       const phone = selector.inputmask.unmaskedvalue()
       return Boolean(Number(phone) && phone.length === 10)
     },
-    errorMessage: 'Введіть номер телефона повністю'
+    errorMessage: 'Введіть номер телефона повністю!'
   }
-]).onSuccess(async function () {
+])
+.onSuccess(async function () {
   let data = {
     userName: document.getElementById("userName").value,
     phoneNumber: selector.inputmask.unmaskedvalue(),
@@ -45,7 +54,14 @@ validation.addField("#userName", [
 
   let result = await response.text()
 
-  alert(result)
+  const spinner = document.getElementById("spinner");
+
+  if(result) {
+    spinner.style.visibility = "hidden";
+    alert(result)
+  } else {
+    spinner.style.visibility = "visible";
+  }
   
   document.getElementById("userName").value = '';
   document.getElementById("phoneNumber").value = '';

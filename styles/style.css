@@ -20,6 +20,11 @@ body {
 	max-height: 800px;
 }
 
+.our-services-img {
+	max-width: 600px;
+	max-height: 400px;
+}
+
 .icon {
 	width: 30px;
 }
@@ -28,3 +33,11 @@ body {
 	width: 50px;
 }
 
+#spinner {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	visibility: hidden;
+	color: #94B3A9;
+	z-index: 3;
+}
