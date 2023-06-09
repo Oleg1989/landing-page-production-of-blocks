@@ -42,8 +42,15 @@ validation
   let data = {
     userName: document.getElementById("userName").value,
     phoneNumber: selector.inputmask.unmaskedvalue(),
+    services: document.getElementById("serviceSelection").value,
   }
 
+  document.getElementById("userName").value = '';
+  document.getElementById("phoneNumber").value = '';
+
+  const spinner = document.getElementById("spinner");
+  spinner.style.visibility = "visible";
+   
   let response = await fetch("mail.php", {
     method: "POST",
     body: JSON.stringify(data),
@@ -51,18 +58,12 @@ validation
       "Content-Type": "application/json; charset=UTF-8"
     }
   })
-
-  let result = await response.text()
-
-  const spinner = document.getElementById("spinner");
-
-  if(result) {
-    spinner.style.visibility = "hidden";
-    alert(result)
-  } else {
-    spinner.style.visibility = "visible";
-  }
   
-  document.getElementById("userName").value = '';
-  document.getElementById("phoneNumber").value = '';
+  if (response.ok) {
+    spinner.style.visibility = "hidden";
+  }
+
+  let result = await response.text();
+
+  alert(result);
 })

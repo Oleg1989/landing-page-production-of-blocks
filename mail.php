@@ -11,11 +11,13 @@ $data = json_decode($json, true); // Преобразование json
 // Данные
 $userName = $data['userName'];
 $phoneNumber = $data['phoneNumber'];
+$services = $data['services'];
 
 // Контент письма
 $title = 'Заявка з сайта HDblock'; // Название письма
 $body = '<p>Ім`я: <strong>' . $userName . '</strong></p>' .
-  '<p>Мобільний телефон: <strong>' . $phoneNumber . '</strong></p>';
+  '<p>Мобільний телефон: <strong>' . $phoneNumber . '</strong></p>' .
+  '<p>Послуга: <strong>' . $services . '</strong></p>';
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
