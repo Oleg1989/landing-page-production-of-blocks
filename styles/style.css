@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&family=Open+Sans:wght@500&display=swap');
 
 body {
 	font-family: 'DM Sans', sans-serif;
@@ -8,6 +9,7 @@ body {
 	font-size: 1.5rem;
 	font-weight: bolder;
 	text-transform: none;
+	font-family: 'Bai Jamjuree', sans-serif;
 }
 
 .img-first-screen {
