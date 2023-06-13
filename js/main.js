@@ -63,7 +63,6 @@ validation
       spinner.style.visibility = "hidden";
     }
 
-    //spinner.style.visibility = "hidden";
     let result = await response.text();
 
     const myModal = new bootstrap.Modal('#exampleModal', {
@@ -71,14 +70,10 @@ validation
     })
 
     const modalTitle = document.getElementById('exampleModalLabel');
-    //modalTitle.innerText = 'Повідомлення з сайту HDblock!';
-    modalTitle.innerText = result;
+    modalTitle.innerText = 'Повідомлення з сайту HDblock!';
 
     const modalBody = document.getElementsByClassName('modal-body');
-    //modalBody[0].textContent = 'Запит відправленний!';
     modalBody[0].textContent = result;
 
     myModal.show();
-
-    // alert(result);
   });
