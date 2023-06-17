@@ -8,6 +8,7 @@ validation
   .addField("#serviceSelection", [
     {
       rule: "required",
+      value: 2,
       errorMessage: "Виберіть послугу!",
     },
   ])
