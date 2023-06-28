@@ -37,11 +37,12 @@ body {
 	top: 50%;
 	left: 50%;
 	visibility: hidden;
-	color: #94B3A9;
+	color: #94b3a9;
 	z-index: 3;
 }
 
 #ourWorks img {
 	width: 285px;
 	height: 400px;
+	display: inline-block;
 }
